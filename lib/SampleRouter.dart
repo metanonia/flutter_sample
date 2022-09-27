@@ -7,8 +7,11 @@ import 'package:flutter_sample/pages/home_page.dart';
 import 'package:flutter_sample/pages/mnist_page.dart';
 import 'package:flutter_sample/pages/qr_page.dart';
 import 'package:flutter_sample/pages/qr_read_page.dart';
+import 'package:flutter_sample/pages/rest_page.dart';
 import 'package:flutter_sample/pages/web_view_page.dart';
 import 'package:get/get.dart';
+
+import 'controller/rest_page_controller.dart';
 
 class SampleRouter {
   static final route = [
@@ -45,6 +48,13 @@ class SampleRouter {
       page: () => WebViewPage(),
       binding: BindingsBuilder(() {
         Get.lazyPut<WebViewPageController>(() => WebViewPageController());
+      }),
+    ),
+    GetPage(
+      name: '/rest',
+      page: () => RestPage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<RestPageController>(() => RestPageController());
       }),
     ),
   ];

@@ -33,6 +33,10 @@ class HomePage extends GetView<HomePageController> {
                 onPressed: () => Get.toNamed('/webview'),
                 child: Text('WebView')
             ),
+            ElevatedButton(
+                onPressed: () => Get.toNamed('/rest'),
+                child: Text('Rest')
+            ),
           ],
         )
 

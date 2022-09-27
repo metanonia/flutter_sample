@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../component/Prediction.dart';
 import '../service/recognizer.dart';
 
-class MmistPageController extends GetxController {
+class MnistPageController extends GetxController {
   final points = RxList<Offset?>();
   final prediction = RxList<Prediction>();
   Recognizer recognizer = Recognizer();

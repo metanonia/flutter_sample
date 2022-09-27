@@ -5,9 +5,10 @@ import 'package:qr_flutter/qr_flutter.dart';
 import '../controller/qr_page_controller.dart';
 
 class QrPage extends GetView<QrPageController> {
+  const QrPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final QrPageController controller = Get.put(QrPageController());
     final textController = TextEditingController();
 
     return Scaffold(

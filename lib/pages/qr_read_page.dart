@@ -10,19 +10,22 @@ import 'package:get/get.dart';
 import '../controller/qr_read_page_controller.dart';
 
 class QrReadPage extends GetView<QrReadPageController> {
+  QrReadPage({Key? key}) : super(key: key);
+
   static final _possibleFormats = BarcodeFormat.values.toList()
     ..removeWhere((e) => e == BarcodeFormat.unknown);
 
   List<BarcodeFormat> selectedFormats = [..._possibleFormats];
 
+
+
   @override
   Widget build(BuildContext context) {
-    final QrReadPageController controller = Get.put(QrReadPageController());
 
     return Scaffold(
 
         appBar: AppBar(
-          title: Text('QR Read', style: TextStyle(color: Colors.white),),
+          title: const Text('QR Read', style: TextStyle(color: Colors.white),),
           backgroundColor: Colors.blue,
         ),
         backgroundColor: Colors.white,

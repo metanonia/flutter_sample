@@ -1,23 +1,20 @@
 import 'dart:typed_data';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import 'package:image/image.dart' as im;
 
 import '../component/Prediction.dart';
 import '../component/constants.dart';
 import '../component/drawing_painter.dart';
 import '../component/prediction_widget.dart';
-import '../controller/mmist_page_controller.dart';
-import '../service/recognizer.dart';
+import '../controller/mnist_page_controller.dart';
 
-class MmistPage extends GetView<MmistPageController> {
+class MnistPage extends GetView<MnistPageController> {
+  const MnistPage({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
-    final MmistPageController controller = Get.put(MmistPageController());
 
     return Scaffold(
       appBar: AppBar(

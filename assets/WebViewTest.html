@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>WebView Test</title>
+</head>
+<body>
+<h1 id="title">WebView Test</h1>
+
+<button type="button" onclick="sendFlutter()">Send message to flutter</button>
+</body>
+
+<script type="text/javascript">
+    function fromFlutter(newTitle) {
+        document.getElementById("title").innerHTML = newTitle;
+    }
+
+    function sendFlutter() {
+        var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+        JavaScriptChannel.postMessage("Message From JS "  + dateTime);
+    }
+</script>

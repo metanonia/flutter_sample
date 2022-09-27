@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 import '../controller/home_page_controller.dart';
 
 class HomePage extends GetView<HomePageController> {
+
   @override
   Widget build(BuildContext context) {
-    final HomePageController controller = Get.put(HomePageController());
 
     return Scaffold(
       appBar: AppBar(
@@ -28,6 +28,10 @@ class HomePage extends GetView<HomePageController> {
             ElevatedButton(
                 onPressed: () => Get.toNamed('/mmist'),
                 child: Text('MMIST')
+            ),
+            ElevatedButton(
+                onPressed: () => Get.toNamed('/webview'),
+                child: Text('WebView')
             ),
           ],
         )

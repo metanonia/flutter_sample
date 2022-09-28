@@ -37,6 +37,10 @@ class HomePage extends GetView<HomePageController> {
                 onPressed: () => Get.toNamed('/rest'),
                 child: Text('Rest')
             ),
+            ElevatedButton(
+                onPressed: () => Get.toNamed('/otp'),
+                child: Text('OTP')
+            ),
           ],
         )
 

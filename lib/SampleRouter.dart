@@ -5,12 +5,14 @@ import 'package:flutter_sample/controller/qr_read_page_controller.dart';
 import 'package:flutter_sample/controller/web_view_page_controller.dart';
 import 'package:flutter_sample/pages/home_page.dart';
 import 'package:flutter_sample/pages/mnist_page.dart';
+import 'package:flutter_sample/pages/otp_page.dart';
 import 'package:flutter_sample/pages/qr_page.dart';
 import 'package:flutter_sample/pages/qr_read_page.dart';
 import 'package:flutter_sample/pages/rest_page.dart';
 import 'package:flutter_sample/pages/web_view_page.dart';
 import 'package:get/get.dart';
 
+import 'controller/otp_page_controller.dart';
 import 'controller/rest_page_controller.dart';
 
 class SampleRouter {
@@ -55,6 +57,13 @@ class SampleRouter {
       page: () => RestPage(),
       binding: BindingsBuilder(() {
         Get.lazyPut<RestPageController>(() => RestPageController());
+      }),
+    ),
+    GetPage(
+      name: '/otp',
+      page: () => OtpPage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<OtpPageController>(() => OtpPageController());
       }),
     ),
   ];
